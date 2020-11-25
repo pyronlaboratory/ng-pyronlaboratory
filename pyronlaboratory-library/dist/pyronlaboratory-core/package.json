@@ -1,0 +1,21 @@
+{
+  "name": "pyronlaboratory-core",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^8.2.14",
+    "@angular/core": "^8.2.14"
+  },
+  "main": "bundles/pyronlaboratory-core.umd.js",
+  "module": "fesm5/pyronlaboratory-core.js",
+  "es2015": "fesm2015/pyronlaboratory-core.js",
+  "esm5": "esm5/pyronlaboratory-core.js",
+  "esm2015": "esm2015/pyronlaboratory-core.js",
+  "fesm5": "fesm5/pyronlaboratory-core.js",
+  "fesm2015": "fesm2015/pyronlaboratory-core.js",
+  "typings": "pyronlaboratory-core.d.ts",
+  "metadata": "pyronlaboratory-core.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
