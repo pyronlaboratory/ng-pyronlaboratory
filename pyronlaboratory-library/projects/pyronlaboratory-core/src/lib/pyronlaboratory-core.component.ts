@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'lib-pyronlaboratory-core',
   template: `
-    <p>
-      pyronlaboratory-core works!
-    </p>
+    <h1>
+	pyronlaboratory-core works!
+    </h1>
   `,
   styles: []
 })

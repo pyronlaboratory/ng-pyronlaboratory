@@ -1,4 +1,58 @@
-import { Injectable, ɵɵdefineInjectable, Component, NgModule } from '@angular/core';
+import { Component, Pipe, Injectable, ɵɵdefineInjectable, NgModule } from '@angular/core';
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/pyronlaboratory-core.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+class PyronlaboratoryCoreComponent {
+    constructor() { }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+    }
+}
+PyronlaboratoryCoreComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'lib-pyronlaboratory-core',
+                template: `
+    <h1 style="font-family: monospace;">
+	pyronlaboratory-core works!
+    </h1>
+  `
+            }] }
+];
+/** @nocollapse */
+PyronlaboratoryCoreComponent.ctorParameters = () => [];
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/pyronlaboratory-core.pipe.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/*
+ * Raise the value exponentially
+ * Takes an exponent argument that defaults to 1.
+ * Usage:
+ *   value | exponentialStrength:exponent
+ * Example:
+ *   {{ 2 | exponentialStrength:10 }}
+ *   formats to: 1024
+*/
+class PyronlaboratoryCorePipe {
+    /**
+     * @param {?} value
+     * @param {?=} exponent
+     * @return {?}
+     */
+    transform(value, exponent) {
+        return Math.pow(value, isNaN(exponent) ? 1 : exponent);
+    }
+}
+PyronlaboratoryCorePipe.decorators = [
+    { type: Pipe, args: [{ name: 'exponentialStrength' },] }
+];
 
 /**
  * @fileoverview added by tsickle
@@ -19,32 +73,6 @@ PyronlaboratoryCoreService.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
- * Generated from: lib/pyronlaboratory-core.component.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-class PyronlaboratoryCoreComponent {
-    constructor() { }
-    /**
-     * @return {?}
-     */
-    ngOnInit() {
-    }
-}
-PyronlaboratoryCoreComponent.decorators = [
-    { type: Component, args: [{
-                selector: 'lib-pyronlaboratory-core',
-                template: `
-    <p>
-      pyronlaboratory-core works!
-    </p>
-  `
-            }] }
-];
-/** @nocollapse */
-PyronlaboratoryCoreComponent.ctorParameters = () => [];
-
-/**
- * @fileoverview added by tsickle
  * Generated from: lib/pyronlaboratory-core.module.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
@@ -52,9 +80,9 @@ class PyronlaboratoryCoreModule {
 }
 PyronlaboratoryCoreModule.decorators = [
     { type: NgModule, args: [{
-                declarations: [PyronlaboratoryCoreComponent],
+                declarations: [PyronlaboratoryCoreComponent, PyronlaboratoryCorePipe],
                 imports: [],
-                exports: [PyronlaboratoryCoreComponent]
+                exports: [PyronlaboratoryCoreComponent, PyronlaboratoryCorePipe]
             },] }
 ];
 
@@ -70,5 +98,5 @@ PyronlaboratoryCoreModule.decorators = [
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
-export { PyronlaboratoryCoreComponent, PyronlaboratoryCoreModule, PyronlaboratoryCoreService };
+export { PyronlaboratoryCoreComponent, PyronlaboratoryCoreModule, PyronlaboratoryCorePipe, PyronlaboratoryCoreService };
 //# sourceMappingURL=pyronlaboratory-core.js.map

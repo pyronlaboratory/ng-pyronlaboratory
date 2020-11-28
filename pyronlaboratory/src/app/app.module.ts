@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { PyronlaboratoryCoreComponent } from 'pyronlaboratory-core';
+import { PyronlaboratoryCoreModule } from 'pyronlaboratory-core';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { PyronlaboratoryCoreComponent } from 'pyronlaboratory-core';
   imports: [
     BrowserModule,
     AppRoutingModule,
-	PyronlaboratoryCoreComponent
+	PyronlaboratoryCoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
