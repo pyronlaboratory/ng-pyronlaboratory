@@ -118,13 +118,9 @@ Make use of `npm link` to create a symlink for your library workspace. This link
 
 Library linking is a two-step process.
 
-First,  type in `npm link`  in a library workspace.
+First,  type in `npm link`  in a library workspace. This creates a symlink in the global folder `{prefix}/lib/node_modules/pyronlaboratory-core`.  
 
-This creates a symlink in the global folder `{prefix}/lib/node_modules/pyronlaboratory-core`.  
-
-Next, in your application workspace, execute  `npm link pyronlaboratory-core`.
-
-This will create a symbolic link and install the library in your application.
+Next, in your application workspace, execute  `npm link pyronlaboratory-core`. This will create a symbolic link and install the library in your application.
 
 In the project workspace, within the `node_modules` you should be able to see your library with an '**@**' appended to it. Now you can easily import relevant components and services from your library into your projects `app.module.ts`.. or lazy-load them if you prefer that approach.
 
@@ -173,6 +169,14 @@ Usage:
  Example:
 
     {{ 2 | exponentialStrength:10 }} // formats to: 1024
+
+Add the following entry in the `public-api.ts` file
+
+```
+...
+export * from './lib/pyronlaboratory-core.module';
+
+```
 
 Additionally add a small test in the spec file as follows to test the library's new pipe.
 
