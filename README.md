@@ -1,8 +1,13 @@
-﻿# Integrate custom angular libraries with your angular applications
+
+# Integrate custom angular libraries with your angular applications
 
 This README.md file documents the step required to replicate this repository and walks through the various steps involved in the process.
 
-### Prerequistes
+### Prerequisites
+
+- Node.js
+- NPM Package Manager
+- Angular CLI
 
 ## Setup Angular Application
 
@@ -30,13 +35,14 @@ Change the directory location and create another folder outside the root applica
 Once the library has been bootstraped by the angular-cli, navigate to the `projects/pyronlaboratory-core/src` and  you should see the following files in the source directory of the newly created library
 
     λ tree /f
+    
     Folder PATH listing for volume Windows
     Volume serial number is CA29-4BC6
     C:.
-    �   public-api.ts
-    �   test.ts
-    �
-    +---lib
+    │   public-api.ts
+    │   test.ts
+    │
+    └───lib
             pyronlaboratory-core.component.spec.ts
             pyronlaboratory-core.component.ts
             pyronlaboratory-core.module.ts
@@ -166,8 +172,7 @@ Usage:
  
  Example:
 
-    {{ 2 | exponentialStrength:10 }}
-    // formats to: 1024
+    {{ 2 | exponentialStrength:10 }} // formats to: 1024
 
 Additionally add a small test in the spec file as follows to test the library's new pipe.
 
@@ -193,19 +198,20 @@ Build the library again, and run the tests.
 
 Your browser should reflect 3 specs running successfully and terminal should log the following..
 
-λ ng test pyronlaboratory-core
-11% building 10/10 modules 0 active28 11 2020 19:31:56.354:WARN [karma]: No captured browser, open http://localhost:9876/
-28 11 2020 19:31:56.823:INFO [karma-server]: Karma v4.1.0 server started at http://0.0.0.0:9876/
-28 11 2020 19:31:56.825:INFO [launcher]: Launching browsers Chrome with concurrency unlimited
-28 11 2020 19:31:57.060:INFO [launcher]: Starting browser Chrome
-28 11 2020 19:32:54.899:WARN [karma]: No captured browser, open http://localhost:9876/
-28 11 2020 19:32:56.259:INFO [Chrome 86.0.4240 (Windows 10.0.0)]: Connected on socket SUV8qfJX1DVPDQq5AAAA with id 60668947
-Chrome 86.0.4240 (Windows 10.0.0): Executed 3 of 3 SUCCESS (1 sec / 0.39 secs)
-TOTAL: 3 SUCCESS
-TOTAL: 3 SUCCESS
+    λ ng test pyronlaboratory-core
+    
+    11% building 10/10 modules 0 active28 11 2020 19:31:56.354:WARN [karma]: No captured browser, open http://localhost:9876/
+    28 11 2020 19:31:56.823:INFO [karma-server]: Karma v4.1.0 server started at http://0.0.0.0:9876/
+    28 11 2020 19:31:56.825:INFO [launcher]: Launching browsers Chrome with concurrency unlimited
+    28 11 2020 19:31:57.060:INFO [launcher]: Starting browser Chrome
+    28 11 2020 19:32:54.899:WARN [karma]: No captured browser, open http://localhost:9876/
+    28 11 2020 19:32:56.259:INFO [Chrome 86.0.4240 (Windows 10.0.0)]: Connected on socket SUV8qfJX1DVPDQq5AAAA with id 60668947
+    Chrome 86.0.4240 (Windows 10.0.0): Executed 3 of 3 SUCCESS (1 sec / 0.39 secs)
+    TOTAL: 3 SUCCESS
+    TOTAL: 3 SUCCESS
 
 
-<img src="images/karma.png" alt="Test Results" width="500"/>
+<img src="images/karma.png" alt="Test Results" width="100%"/>
 
 We can now directly start using this pipe within application source code. 
 
@@ -214,8 +220,10 @@ Open your `app.component.html` file and type the following..
     <!-- app.component.html -->
     
     ..
+    
     <lib-pyronlaboratory-core></lib-pyronlaboratory-core>
     <h2>Level: {{ 10 | exponentialStrength:3 }} XP</h2>
+    
     ...
 
 Additionally I've added a some style attributes within the applications `index.html` file, to make it look a little less horrible.
@@ -239,10 +247,11 @@ Additionally I've added a some style attributes within the applications `index.h
 
  And boom, your browser should show you the below screen..
 
-<img src="images/pyronlaboratory.png" alt="Homescreen" width="500"/>
+<img src="images/pyronlaboratory.png" alt="Homescreen" width="100%"/>
  
 This marks the end of this README.md file.
  
 Drop a star if you like this small project!
 
-<a href="https://ko-fi.com/F1F1VEXA" target="_blank"><img src="ko-fi.png" alt="Buy me a Ko-fi, will ya?!" width="200"/></a>
+<a href="https://ko-fi.com/F1F1VEXA" target="_blank"><img src="images/ko-fi.png" alt="Buy me a Ko-fi, will ya?!" width="200"/></a>
+
