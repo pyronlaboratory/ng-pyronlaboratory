@@ -65,14 +65,14 @@ The `public-api.ts` acts as importing interface between libraries modules and ap
 
 You can build your library by running the following command:
 
-    λ ng build my-lib
+    λ ng build pyronlaboratory-core
 
 The library uses a custom building mechanism, among other things, ensures that the library is always built with the [AOT compiler](https://angular.io/guide/aot-compiler), **without** the need to specify the `--prod` flag.
 
 If the build is successful you should see the following logs in your terminal
 
    
-    λ ng build my-lib
+    λ ng build pyronlaboratory-core
     
     Building Angular Package
     
